@@ -58,7 +58,7 @@ class BuildConfigure(Command):
             if executable:
                 import subprocess
                 executable = os.path.abspath(executable)
-                os.chmod(executable, 0777)
+                os.chmod(executable, 0o777)
                 subprocess.check_call(executable, cwd=os.path.dirname(executable))
 
 
